@@ -2,6 +2,8 @@
 
 [Overview](../README.md) · [Website installation prompts](https://augmentoragent.com/#installation) · [Platform support](PLATFORMS.md)
 
+**Fedora 44 x86_64:** use the [downloadable Fedora Desktop preview and installation guide](FEDORA.md). The Debian bundle instructions below are separate.
+
 Choose one route. Do not mix the public Browser 0.1.32 companion with the 0.2.9 extension.
 
 ## 1. Desktop + Browser — Linux preview 0.2.9

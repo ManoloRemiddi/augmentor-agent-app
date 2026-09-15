@@ -26,7 +26,7 @@ A native workspace for conversations and configured DSH capabilities. Choose a s
 
 *Actual Desktop interface with staged demonstration content.*
 
-The **0.2.9 Linux preview** is installable from the prepared bundle on **Debian 13, Intel/AMD 64-bit (amd64)**. **The bundle has not yet been published for public download.** Reviewers who already have it can use the installation guide. There is no Desktop download attached to this repository yet.
+The **0.2.9 Linux preview** is installable from the prepared bundle on **Debian 13, Intel/AMD 64-bit (amd64)**. **The bundle has not yet been published for public download.** Reviewers who already have it can use the installation guide. A separate **[Fedora 44 x86_64 experimental RPM](docs/FEDORA.md)** is now downloadable. It has passed container installation and rendering tests; real desktop integration remains unverified.
 
 Desktop requires the runtime and Desktop packages. The matching Browser extension is optional. DSH, model files, credentials and third-party plugins are separate.
 

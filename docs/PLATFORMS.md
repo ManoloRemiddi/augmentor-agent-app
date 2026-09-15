@@ -13,3 +13,7 @@ Chromium extension technology is portable, but Augmentor uses native messaging t
 Other Chromium browsers and Linux distributions are not universally certified. Firefox and Safari are not supported by these releases. Desktop graphical-control evidence is scoped to KDE Plasma Wayland and does not imply every application or capture workflow is verified.
 
 The current backend is DeepSeek Harness. Pi support and Pi extensions are planned later, with fewer capabilities initially. No release dates are announced.
+
+## Fedora preview
+
+[Fedora 44 x86_64 Desktop RPM](FEDORA.md) is publicly downloadable for testing. Container installation, rendering and maintenance checks passed. Real desktop control, shortcuts, browser attachment and DSH model turns remain unverified. Atomic desktops and ARM are not covered.
