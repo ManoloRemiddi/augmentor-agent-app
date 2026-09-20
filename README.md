@@ -1,65 +1,42 @@
-# Augmentor Agent — Browser & Desktop
+# Augmentor Agent — Desktop & Browser
 
-**Your AI, close to the work.** Augmentor brings DeepSeek Harness into your Chromium browser and a native desktop workspace, with your choice of configured local or cloud models.
+Your local or cloud AI, close to the work. A native desktop workspace and matching Chromium sidebar, powered by DeepSeek Harness.
 
-[Website](https://augmentoragent.com/) · [Installation](docs/INSTALLATION.md) · [Platform support](docs/PLATFORMS.md) · [Discord](https://discord.gg/MRESQnf4R4) · [YouTube](https://www.youtube.com/@manolo.remiddi)
+[Website](https://augmentoragent.com/) · [Install](docs/COMPLETE-INSTALL.md) · [Platforms](docs/PLATFORMS.md) · [Discord](https://discord.gg/MRESQnf4R4)
 
-This is the public documentation and release-information home for both editions. Development code and history are maintained separately. This repository does not contain the application source or private configuration.
+## Complete Linux preview 0.2.9
 
-## Two editions
+[Download the complete bundle](https://github.com/ManoloRemiddi/augmentor-agent-app/releases/download/v0.2.9-complete-preview.1/augmentor-0.2.9-complete-preview.1.tar.gz) · [Checksums](https://github.com/ManoloRemiddi/augmentor-agent-app/releases/download/v0.2.9-complete-preview.1/SHA256SUMS) · [Release and reviewed source snapshots](https://github.com/ManoloRemiddi/augmentor-agent-app/releases/tag/v0.2.9-complete-preview.1)
 
-### Augmentor Agent Browser
+For **Debian 13, Intel/AMD 64-bit**. Extract the archive and run `./install.sh` as your normal user. The guided installer installs the matching desktop/browser runtime, pinned DSH, Model Picker 1.1.2, Adaptive Reasoning 0.2.3 and Resonant Voice 0.1.15. It asks for your own model connection and offers optional local speech and dual memory. Chromium requires a manual **Load unpacked** step. See the [complete guide](docs/COMPLETE-INSTALL.md) for requirements and verification.
 
-Work in your real Chromium tabs. The agent can read pages, navigate, click and type while you follow the conversation in its sidebar. A visible activity veil shows when it is working.
+This is a fresh-install preview. Existing DSH/Augmentor profiles are refused for a reviewed migration; do not delete your data to bypass this check. Desktop-control qualification is scoped to KDE Plasma Wayland. A container check establishes installation/rendering, not microphone, graphical control or login behavior on every machine.
 
-![Augmentor Browser working on augmentatism.com](images/browser.png)
+![Native Desktop with Blossom lake skin and integrated audio](images/desktop.png)
 
-The public **0.1.32** release is tested on Linux with Chromium and DSH **0.1.5-rc.1**. It includes an extension, a DSH plugin and a native companion. Its DSH preset also includes local command and filesystem tools; access depends on your permissions and configuration.
+*Actual app, synthetic conversation. No personal conversation or recording is shown.*
 
-[Download Browser 0.1.32](https://github.com/ManoloRemiddi/augmentor-dsh-extension-plugin/releases/download/v0.1.32/augmentor-0.1.32-dist.zip) · [Original release and source](https://github.com/ManoloRemiddi/augmentor-dsh-extension-plugin/releases/tag/v0.1.32)
+## Included capabilities
 
-### Augmentor Agent Desktop
+- Resonant Voice: recording, slide-to-lock, optional hands-free mode and expressive speech playback. Local engines are an optional setup step.
+- Separate relationship/project memory adapters, with optional local Hindsight setup and new private stores.
+- A second independent conversation window. KDE defaults, when free: Super+Alt+Space and Super+Alt+Shift+Space.
+- Consistent desktop selection for login, menu, shortcuts and connection recovery; staged updates and a retained rollback selection.
+- Reusable prompts, prompt improvement, conversation actions, readable code and customizable animated skins.
+- Desktop computer-control tools and browser-scoped tools in the matching Chromium edition.
 
-A native workspace for conversations and configured DSH capabilities. Choose a show/hide shortcut, bring the agent into view, and switch to a compact activity view when you want it nearby without a full conversation window.
+Bring your own supported chat model and credentials. The basic wizard configures an OpenAI-compatible text endpoint; advanced capabilities can be configured in DSH. Adaptive Reasoning starts with empty routes to preserve your model's defaults. Guided dual memory currently requires a local numeric-loopback model endpoint.
 
-![Augmentor Desktop working-state interface](images/desktop.png)
+Breeze speech weights and self-hosted outputs have [research/non-commercial terms](https://huggingface.co/BreezeBlue/Breeze-TTS-2#license-and-responsible-use), separate from the MIT source licenses. Weights are downloaded only if speech is selected; they are not bundled.
 
-*Actual Desktop interface with staged demonstration content.*
+## Source, privacy and provenance
 
-The **0.2.9 Linux preview** is installable from the prepared bundle on **Debian 13, Intel/AMD 64-bit (amd64)**. **The bundle has not yet been published for public download.** Reviewers who already have it can use the installation guide. A separate **[Fedora 44 x86_64 experimental RPM](docs/FEDORA.md)** is now downloadable. It has passed container installation and rendering tests; real desktop integration remains unverified.
+The release contains reviewed source snapshots of Augmentor, Resonant Voice and Adaptive Reasoning, exact component commits and SHA-256 checksums. Private development histories remain separate. Packages do not include personal settings, keys, conversations, memory stores, microphone recordings or model weights. New private state is created on the installing machine. Local/cloud models and connected tools retain their own data flows.
 
-Desktop requires the runtime and Desktop packages. The matching Browser extension is optional. DSH, model files, credentials and third-party plugins are separate.
+## Other platforms and older packages
 
-## Features and model choice
+macOS compatibility is the next priority. Windows and Pi support follow later; these are not supported by this Linux installer. The [Fedora experimental RPM](docs/FEDORA.md) predates the complete voice/memory bundle. [Browser 0.1.32](https://github.com/ManoloRemiddi/augmentor-dsh-extension-plugin/releases/tag/v0.1.32) is a legacy standalone release; do not mix its companion with 0.2.9.
 
-- Configured local or cloud models through DeepSeek Harness.
-- Reusable prompts, AI prompt improvement and conversation actions in the current development editions.
-- Syntax-coloured code blocks and copy controls.
-- Desktop colour, transparency and activity-effect customization.
-- Desktop shortcut access and expanded/compact views.
+The [September 13 DSH collection](https://github.com/ManoloRemiddi/deepseek-harness-plugins) remains an older set of separate plugin packages. The complete bundle already supplies the required plugins; Metafolder, Wiki and other integrations are optional.
 
-Feature availability differs between releases. The **0.2.9 Browser preset is restricted to browser tools and memory recall**; the Desktop integration provides graphical computer-control tools. Do not assume the public 0.1.32 package has every feature shown in development screenshots.
-
-Local inference can keep prompts on your computer. Cloud inference sends requests to your chosen provider. Connected tools, websites and external services have their own data flows.
-
-## Requirements and roadmap
-
-The Browser extension also needs an **Augmentor native companion**; installing DSH alone is not enough. The complete setup is currently verified on Linux. macOS is planned next, followed by Windows. Pi backend support and extensions are deferred; initial Pi support will have fewer capabilities than DSH. No release dates are announced.
-
-See [platform support](docs/PLATFORMS.md) for the exact scope.
-
-## Optional DSH plugins
-
-The [public DSH collection](https://github.com/ManoloRemiddi/deepseek-harness-plugins) contains Augmentor Browser 0.1.32, Metafolder, Model Picker, Adaptive Reasoning and Prompt Library. It is a collection of separate installers, including two previews—not the Desktop installer.
-
-[Download the September 13, 2026 collection](https://github.com/ManoloRemiddi/deepseek-harness-plugins/releases/download/collection-2026.09.13/augmentor-plugins-2026.09.13.zip) · [Collection guide](https://github.com/ManoloRemiddi/deepseek-harness-plugins/blob/main/docs/COLLECTION-INSTALL.md)
-
-## Optional voice input
-
-Our demos use [Handy](https://handy.computer/), a separate open-source speech-to-text app. Focus the Augmentor input, dictate with Handy, review the text, then send. This is not built-in speech playback or a voice-call feature. An Augmentor voice system is planned.
-
-## Help and feedback
-
-Use [Discord](https://discord.gg/MRESQnf4R4) for discussion or [open an issue](https://github.com/ManoloRemiddi/augmentor-agent-app/issues) with your edition, version, operating system and steps to reproduce. Remove credentials, authentication URLs and private conversation content from reports.
-
-[Visit augmentoragent.com](https://augmentoragent.com/) for the product tour and installation prompts.
+For help, [open an issue](https://github.com/ManoloRemiddi/augmentor-agent-app/issues) with versions, OS and reproduction steps. Remove credentials and private conversation content from reports.
