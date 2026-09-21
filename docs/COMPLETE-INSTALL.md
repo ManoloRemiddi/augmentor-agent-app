@@ -28,10 +28,13 @@ and Python packages. Do not run the whole script as root.
 
 ## Included and configured
 
-- Matching Augmentor Desktop and Chromium Browser 0.2.9 surfaces and companion.
+- Matching Augmentor Desktop and Chromium Browser 0.2.10 surfaces and companion.
 - Pinned DSH 0.1.5-rc.1, with its own fresh data directory and a managed user service.
-- Product, desktop-tools, browser-tools, prompt-library and dual-memory adapters.
-- Model Picker Augmented 1.1.2, Adaptive Reasoning 0.2.3 and Resonant Voice 0.1.15.
+- Product, desktop-tools, browser-tools, prompt-library, dual-memory and execution-recovery adapters.
+  Execution recovery is enabled once in both Augmentor presets; no separate plugin installation is needed.
+  It bounds empty/truncated-response recovery, preserves Stop and user handoffs, and prevents
+  exact duplicate changes during recovery. It does not certify that a model answer is correct.
+- Model Picker Augmented 1.1.2, Adaptive Reasoning 0.2.3 and Resonant Voice 0.1.16.
 - Desktop login startup, connection recovery, consistent release selection and
   a separate second-window menu entry. On KDE, available defaults are
   **Super+Alt+Space** for the main window and **Super+Alt+Shift+Space** for the
@@ -82,7 +85,8 @@ No personal microphone recordings are distributed in the bundle.
 
 For a local numeric-loopback model endpoint, the installer can provision pinned
 Hindsight 0.10.0 through Docker. It keeps relationship and project memory separate,
-uses CPU embeddings/reranking and one background extraction worker. It creates a
+uses CPU embeddings/reranking and controlled processing. Extraction is paused by default;
+review and start processing through the memory controls when wanted. It creates a
 persistent named volume and fresh private stores; it never includes the author's
 conversations or memories. The model must support memory extraction workloads.
 The current guided memory path is for a local model; cloud-only users can defer
